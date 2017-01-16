@@ -19,6 +19,6 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test": "mocha --timeout 5000"
+    "test": "mocha --colors --timeout 5000"
   }
 }
