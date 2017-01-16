@@ -4,12 +4,12 @@ services:
 
 ### Workspace Utilities Container ###########################
 
-    # nodejs:
-    #     image: 172.16.20.223/nodejs:latest
-    #     volumes_from:
-    #         - volumes_source
-    #     ports:
-    #         - "8080:8080"
+    nodejs:
+        image: 172.16.20.223/nodejs:latest
+        volumes_from:
+            - volumes_source
+        ports:
+            - "8080:8080"
 
 ### MongoDB Container #######################################
 
