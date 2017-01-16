@@ -1,0 +1,41 @@
+version: '2'
+
+services:
+
+### Workspace Utilities Container ###########################
+
+    # nodejs:
+    #     image: 172.16.20.223/nodejs:latest
+    #     volumes_from:
+    #         - volumes_source
+    #     ports:
+    #         - "8080:8080"
+
+### MongoDB Container #######################################
+
+    mongo:
+        image: 172.16.20.223/mongo:latest
+        ports:
+            - "27017:27017"
+        volumes_from:
+            - volumes_data
+
+### Application Code Container ######################
+
+    volumes_source:
+        image: tianon/true
+        volumes:
+            - .:/usr/src/app
+
+### Databases Data Container ################################
+
+    volumes_data:
+        image: tianon/true
+        volumes:
+            - ./data/mongo:/data/db
+
+### Add more Containers below ###############################
+networks:
+    default:
+        external:
+            name: mapmagiccloud
