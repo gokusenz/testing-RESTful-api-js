@@ -1,2 +1,2 @@
-# bookstore
-Source code for my Tutorial "Test a Node RESTful API with Mocha and Chai"
+# testing restfull api
+Source code for my Tutorial "testing restfull api with Mocha and chai (chaihttp)"
