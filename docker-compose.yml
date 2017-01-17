@@ -5,7 +5,7 @@ services:
 ### Workspace Utilities Container ###########################
 
     nodejs:
-        image: 172.16.20.223/nodejs:latest
+        image: gokusenz/dockergk:nodejs
         volumes_from:
             - volumes_source
         ports:
@@ -14,7 +14,7 @@ services:
 ### MongoDB Container #######################################
 
     mongo:
-        image: 172.16.20.223/mongo:latest
+        image: gokusenz/dockergk:mongo
         ports:
             - "27017:27017"
         volumes_from:
@@ -33,9 +33,3 @@ services:
         image: tianon/true
         volumes:
             - ./data/mongo:/data/db
-
-### Add more Containers below ###############################
-networks:
-    default:
-        external:
-            name: nodejs_default
